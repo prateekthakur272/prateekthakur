@@ -1,37 +1,31 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:prateekthakur/widgets/intro.dart';
+import 'package:prateekthakur/widgets/side_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: CupertinoPageScaffold(
-          navigationBar: const CupertinoNavigationBar(
-            middle: Text('Prateek Thakur'),
-          ),
-          child: Center(
-            child: ListView(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CupertinoSlidingSegmentedControl(
-                    padding: const EdgeInsets.all(4),
-                    children: const {
-                      'Home': Text('Home'),
-                      'About': Text('Home'),
-                      'Contact': Text('Home'),
-                    },
-                    onValueChanged: (i) {},
-                    thumbColor: CupertinoColors.systemGrey,
-                    groupValue: 'Home',
-                    
-                  ),
-                )
-              ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Prateek Thakur',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+      ),
+      body: const Center(
+        child: Row(
+          children: [
+            //f(MediaQuery.of(context).size.width > 800)
+            Padding(
+              padding: EdgeInsets.all(24.0),
+              child: SideBar(),
             ),
-          )),
+            Expanded(flex:9, child: Center(child: Intro()))
+          ],
+        ),
+      ),
     );
   }
 }
