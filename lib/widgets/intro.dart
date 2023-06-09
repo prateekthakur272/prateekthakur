@@ -24,8 +24,8 @@ class Intro extends StatelessWidget {
                   const Text(subtitle ,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
                   const SizedBox(height: 4,),
                   const Text(organization ,style: TextStyle(fontSize: 18)),
-                  const SizedBox(height: 8,),
-                  OutlinedButton(onPressed: (){}, child: const Text('Contact me')),
+                  //const SizedBox(height: 8,),
+                  //OutlinedButton(onPressed: (){}, child: const Text('Contact me')),
                   const SizedBox(height: 24,),
                   Wrap(
                     runSpacing: 16,
