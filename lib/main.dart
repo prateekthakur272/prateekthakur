@@ -30,7 +30,10 @@ class App extends StatelessWidget {
             backgroundColor: Colors.transparent,
             foregroundColor: Colors.yellow.shade800,
             side: BorderSide(color: Colors.yellow.shade800,width: 2),
-            padding: const EdgeInsets.all(24)
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.zero
+            ),
+            padding: const EdgeInsets.symmetric(vertical: 24,horizontal: 32)
           )
         )
       ),
