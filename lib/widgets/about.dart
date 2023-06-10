@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:prateekthakur/constants.dart';
 import 'package:prateekthakur/widgets/about_item.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class About extends StatelessWidget {
   const About({super.key});
@@ -62,21 +63,31 @@ class About extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 56,),
+        const SizedBox(
+          height: 56,
+        ),
         const Wrap(
           alignment: WrapAlignment.spaceEvenly,
           runAlignment: WrapAlignment.spaceEvenly,
           spacing: 24,
           runSpacing: 24,
           children: [
-            AboutItem('4+','Years\nexperience'),
-            AboutItem('5+','Known\nlanguages'),
-            //AboutItem('2','Projects\nbuilt'),
-            AboutItem('20+','Projects\nbuilt'),
+            AboutItem('4+', 'Years\nexperience'),
+            AboutItem('5+', 'Known\nlanguages'),
+            AboutItem('20+', 'Projects\nbuilt'),
           ],
         ),
-        const SizedBox(height: 48,),
-        OutlinedButton(onPressed: (){}, child: const Text('Download CV'))
+        const SizedBox(
+          height: 48,
+        ),
+        OutlinedButton(
+            onPressed: () async {
+              final url = Uri.parse('https://drive.google.com/file/d/1OZ2aZ-1ZrhtYQPri6gxbjLwNss2gWPXH/view?usp=share_link');
+              if (await canLaunchUrl(url)) {
+                launchUrl(url);
+              }
+            },
+            child: const Text('Download CV'))
       ],
     );
   }
