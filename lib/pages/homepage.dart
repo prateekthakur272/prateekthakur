@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prateekthakur/widgets/about.dart';
 import 'package:prateekthakur/widgets/intro.dart';
-import 'package:prateekthakur/widgets/side_bar.dart';
+import 'package:prateekthakur/widgets/skills.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -21,11 +21,6 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Row(
           children: [
-            if (MediaQuery.of(context).size.width > 800)
-              const Padding(
-                padding: EdgeInsets.all(24.0),
-                child: SideBar(),
-              ),
             Expanded(
                 flex: 9,
                 child: Center(
@@ -33,7 +28,14 @@ class HomePage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   children: const [
                     Intro(),
-                    About()
+                    About(),
+                    SizedBox(
+                      height: 54,
+                    ),
+                    Skills(),
+                    SizedBox(
+                      height: 54,
+                    ),
                   ],
                 )))
           ],

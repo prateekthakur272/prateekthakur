@@ -13,30 +13,40 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Prateek Thakur',
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          centerTitle: true,
-          foregroundColor: Colors.black
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.yellow.shade700,
-            padding: const EdgeInsets.all(24)
-          )
-        ),
-        outlinedButtonTheme: OutlinedButtonThemeData(
-          style: OutlinedButton.styleFrom(
-            backgroundColor: Colors.transparent,
-            foregroundColor: Colors.yellow.shade800,
-            side: BorderSide(color: Colors.yellow.shade800,width: 2),
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.zero
+          appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              centerTitle: true,
+              foregroundColor: Colors.black),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.yellow.shade700,
+                  padding: const EdgeInsets.all(24))),
+          outlinedButtonTheme: OutlinedButtonThemeData(
+              style: OutlinedButton.styleFrom(
+                  backgroundColor: Colors.transparent,
+                  foregroundColor: Colors.yellow.shade800,
+                  side: BorderSide(color: Colors.yellow.shade800, width: 2),
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 24, horizontal: 32))),
+          expansionTileTheme: ExpansionTileThemeData(
+            childrenPadding: const EdgeInsets.all(16),
+            iconColor: Colors.yellow.shade800,
+            textColor: Colors.yellow.shade800,
+            collapsedTextColor: Colors.black,
+            collapsedIconColor: Colors.black,
+            backgroundColor: Colors.grey.shade200,
+            collapsedBackgroundColor: Colors.transparent,
+            expandedAlignment: Alignment.topLeft,
+            collapsedShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16)
             ),
-            padding: const EdgeInsets.symmetric(vertical: 24,horizontal: 32)
-          )
-        )
-      ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16)
+            )
+          )),
       home: const HomePage(),
     );
   }
