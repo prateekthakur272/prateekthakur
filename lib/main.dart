@@ -18,6 +18,20 @@ class App extends StatelessWidget {
           elevation: 0,
           centerTitle: true,
           foregroundColor: Colors.black
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.yellow.shade700,
+            padding: const EdgeInsets.all(24)
+          )
+        ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: OutlinedButton.styleFrom(
+            backgroundColor: Colors.transparent,
+            foregroundColor: Colors.yellow.shade800,
+            side: BorderSide(color: Colors.yellow.shade800,width: 2),
+            padding: const EdgeInsets.all(24)
+          )
         )
       ),
       home: const HomePage(),
