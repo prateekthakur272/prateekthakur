@@ -18,6 +18,16 @@ class _QualificationsState extends State<Qualifications> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        const Text(
+          'Qualifications',
+          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+        ),
+        const Text(
+          'Education details and work experience',
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 14, color: Colors.grey),
+        ),
+        const SizedBox(height: 32,),
         DefaultTabController(
             length: 2,
             child: Column(

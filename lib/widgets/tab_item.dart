@@ -12,7 +12,7 @@ class TabItem extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon),
+          Icon(icon,size: 16,),
           const SizedBox(width: 8,),
           Text(title,style: const TextStyle(
             fontSize: 16,

@@ -38,7 +38,10 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       height: 54,
                     ),
-                    Qualifications()
+                    Qualifications(),
+                    SizedBox(
+                      height: 54,
+                    ),
                   ],
                 )))
           ],
