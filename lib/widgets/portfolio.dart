@@ -1,5 +1,3 @@
-import 'dart:js_interop';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -32,27 +30,34 @@ class _PortfolioState extends State<Portfolio> {
           height: 32,
         ),
         //Wrap(spacing: 32, runSpacing: 32, children: displayItems),
-        CarouselSlider(items: displayItems, options: CarouselOptions(height: 480,enlargeCenterPage: true,autoPlay: true,onPageChanged: (i, r) {
-          setState(() {
-            index = i;
-          });
-        },)),
+        CarouselSlider(
+            items: displayItems,
+            options: CarouselOptions(
+              height: 480,
+              enlargeCenterPage: true,
+              autoPlay: true,
+              onPageChanged: (i, r) {
+                setState(() {
+                  index = i;
+                });
+              },
+            )),
         Row(
-          mainAxisSize: MainAxisSize.min,
-          children: displayItems.map((e){
-            return Padding(
-              padding: const EdgeInsets.all(4.0),
-              child: Container(
-                height: 8,
-                width: 8,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: displayItems.indexOf(e) == index?Colors.black:Colors.grey
+            mainAxisSize: MainAxisSize.min,
+            children: displayItems.map((e) {
+              return Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Container(
+                  height: 8,
+                  width: 8,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: displayItems.indexOf(e) == index
+                          ? Colors.black
+                          : Colors.grey),
                 ),
-              ),
-            );
-          }).toList()
-        )
+              );
+            }).toList())
       ],
     );
   }
@@ -103,13 +108,13 @@ class DisplayItem extends StatelessWidget {
             style: GoogleFonts.inconsolata(),
             textAlign: TextAlign.justify,
           ),
-          if(url.isNotEmpty)
-          const SizedBox(
-            height: 8,
-          ),
-          if(url.isNotEmpty)
-          IconButton(
-              onPressed: () {}, icon: const Icon(FontAwesomeIcons.arrowRight))
+          if (url.isNotEmpty)
+            const SizedBox(
+              height: 8,
+            ),
+          if (url.isNotEmpty)
+            IconButton(
+                onPressed: () {}, icon: const Icon(FontAwesomeIcons.arrowRight))
         ],
       ),
     );
