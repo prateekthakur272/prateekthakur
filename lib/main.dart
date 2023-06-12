@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:prateekthakur/pages/homepage.dart';
 
 void main(List<String> args) {
@@ -48,12 +47,12 @@ class App extends StatelessWidget {
               borderRadius: BorderRadius.circular(16)
             )
           ),
-          listTileTheme: ListTileThemeData(
-            titleTextStyle: GoogleFonts.inconsolata(
-              fontSize: 18,
+          listTileTheme: const ListTileThemeData(
+            titleTextStyle: TextStyle(
+              fontSize: 16,
               fontWeight: FontWeight.bold
             ),
-            subtitleTextStyle: const TextStyle(
+            subtitleTextStyle: TextStyle(
               fontSize: 14,
             ),
           )
