@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prateekthakur/widgets/about.dart';
+import 'package:prateekthakur/widgets/bottom_bar.dart';
 import 'package:prateekthakur/widgets/intro.dart';
 import 'package:prateekthakur/widgets/portfolio.dart';
 import 'package:prateekthakur/widgets/skills.dart';
@@ -47,6 +48,7 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       height: 54,
                     ),
+                    BottomBar()
                   ],
                 )))
           ],
