@@ -50,6 +50,7 @@ class App extends StatelessWidget {
           listTileTheme: const ListTileThemeData(
             titleTextStyle: TextStyle(
               fontSize: 16,
+              color: Colors.black,
               fontWeight: FontWeight.bold
             ),
             subtitleTextStyle: TextStyle(
