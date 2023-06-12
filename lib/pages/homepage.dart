@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prateekthakur/widgets/about.dart';
 import 'package:prateekthakur/widgets/intro.dart';
+import 'package:prateekthakur/widgets/portfolio.dart';
 import 'package:prateekthakur/widgets/skills.dart';
 
 import '../widgets/qualifications.dart';
@@ -39,6 +40,10 @@ class HomePage extends StatelessWidget {
                       height: 54,
                     ),
                     Qualifications(),
+                    SizedBox(
+                      height: 54,
+                    ),
+                    Portfolio(),
                     SizedBox(
                       height: 54,
                     ),

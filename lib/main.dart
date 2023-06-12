@@ -20,8 +20,7 @@ class App extends StatelessWidget {
               foregroundColor: Colors.black),
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.yellow.shade700,
-                  padding: const EdgeInsets.all(24))),
+                  backgroundColor: Colors.yellow.shade700)),
           outlinedButtonTheme: OutlinedButtonThemeData(
               style: OutlinedButton.styleFrom(
                   backgroundColor: Colors.transparent,
