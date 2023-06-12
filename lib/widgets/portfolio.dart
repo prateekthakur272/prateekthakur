@@ -29,9 +29,8 @@ class _PortfolioState extends State<Portfolio> {
         const SizedBox(
           height: 32,
         ),
-        //Wrap(spacing: 32, runSpacing: 32, children: displayItems),
         CarouselSlider(
-            items: displayItems,
+            items: portfolioDisplayItems,
             options: CarouselOptions(
               height: 480,
               enlargeCenterPage: true,
@@ -44,7 +43,7 @@ class _PortfolioState extends State<Portfolio> {
             )),
         Row(
             mainAxisSize: MainAxisSize.min,
-            children: displayItems.map((e) {
+            children: portfolioDisplayItems.map((e) {
               return Padding(
                 padding: const EdgeInsets.all(4.0),
                 child: Container(
@@ -52,12 +51,19 @@ class _PortfolioState extends State<Portfolio> {
                   width: 8,
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: displayItems.indexOf(e) == index
+                      color: portfolioDisplayItems.indexOf(e) == index
                           ? Colors.black
                           : Colors.grey),
                 ),
               );
-            }).toList())
+            }).toList()),
+        const SizedBox(
+          height: 32,
+        ),
+        //const Wrap(spacing: 32, runSpacing: 32, children: projectsDisplayItems),
+        const SizedBox(
+          height: 32,
+        ),
       ],
     );
   }
@@ -121,7 +127,7 @@ class DisplayItem extends StatelessWidget {
   }
 }
 
-var displayItems = const [
+const portfolioDisplayItems = [
   DisplayItem(
     imageProvider: NetworkImage(
         'https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_Android_Developer.jpg'),
@@ -144,6 +150,30 @@ var displayItems = const [
     title: 'Backend Development',
     description:
         'Able to program web server for applications to store data and work with HTTP request and response, i can create server using express.js.',
+    url: '',
+  ),
+];
+
+const projectsDisplayItems = [
+  DisplayItem(
+    imageProvider: NetworkImage('assets/projects/bloodnate.png'),
+    title: 'Bloodnate',
+    description:
+        'Bloodnate is an idea of digitalising blood banks, This project is an app for Android and IOS. A user can make request for blood donation and can also find donor of some specific blood type and component, or can check availability of stocks in blood banks and can book it.',
+    url: '',
+  ),
+  DisplayItem(
+    imageProvider: NetworkImage('assets/projects/bunkmate.png'),
+    title: 'Bunkmate',
+    description:
+        'Bunkmate is a cross-platform mobile application to track daily collage lecture attandance built with Flutter and Firebase.',
+    url: '',
+  ),
+  DisplayItem(
+    imageProvider: NetworkImage('assets/projects/tasks.png'),
+    title: 'Tasks',
+    description:
+        'Never forget your tasks, just use the tasks app and keep yourself reminding about next tasks. This is an android application built with kotlin. This application have a good user experience and interactive and easy to access user interface.',
     url: '',
   ),
 ];
