@@ -1,11 +1,19 @@
+import 'dart:js_interop';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Portfolio extends StatelessWidget {
+class Portfolio extends StatefulWidget {
   const Portfolio({super.key});
 
+  @override
+  State<Portfolio> createState() => _PortfolioState();
+}
+
+class _PortfolioState extends State<Portfolio> {
+  int index = 0;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,8 +31,28 @@ class Portfolio extends StatelessWidget {
         const SizedBox(
           height: 32,
         ),
-        //Wrap(spacing: 32, runSpacing: 32, children: displayItems)
-        CarouselSlider(items: displayItems, options: CarouselOptions(height: 500,enlargeCenterPage: true,autoPlay: true))
+        //Wrap(spacing: 32, runSpacing: 32, children: displayItems),
+        CarouselSlider(items: displayItems, options: CarouselOptions(height: 480,enlargeCenterPage: true,autoPlay: true,onPageChanged: (i, r) {
+          setState(() {
+            index = i;
+          });
+        },)),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: displayItems.map((e){
+            return Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: Container(
+                height: 8,
+                width: 8,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: displayItems.indexOf(e) == index?Colors.black:Colors.grey
+                ),
+              ),
+            );
+          }).toList()
+        )
       ],
     );
   }
@@ -75,9 +103,11 @@ class DisplayItem extends StatelessWidget {
             style: GoogleFonts.inconsolata(),
             textAlign: TextAlign.justify,
           ),
+          if(url.isNotEmpty)
           const SizedBox(
             height: 8,
           ),
+          if(url.isNotEmpty)
           IconButton(
               onPressed: () {}, icon: const Icon(FontAwesomeIcons.arrowRight))
         ],
@@ -108,7 +138,7 @@ var displayItems = const [
         'https://images.ctfassets.net/aq13lwl6616q/7cS8gBoWulxkWNWEm0FspJ/c7eb42dd82e27279307f8b9fc9b136fa/nodejs_cover_photo_smaller_size.png'),
     title: 'Backend Development',
     description:
-        'Able to program server for applications to store data and work with HTTP request and response, i can create server using express.js.',
+        'Able to program web server for applications to store data and work with HTTP request and response, i can create server using express.js.',
     url: '',
   ),
 ];
