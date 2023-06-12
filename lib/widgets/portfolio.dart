@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({super.key});
@@ -30,9 +31,13 @@ class _PortfolioState extends State<Portfolio> {
           height: 32,
         ),
         CarouselSlider(
-            items: portfolioDisplayItems,
+            items: projectsDisplayItems,
             options: CarouselOptions(
-              height: 480,
+              height: 560,
+              autoPlayInterval: const Duration(seconds: 5),
+              pauseAutoPlayOnManualNavigate: true,
+              pauseAutoPlayOnTouch: true,
+              enlargeStrategy: CenterPageEnlargeStrategy.scale,
               enlargeCenterPage: true,
               autoPlay: true,
               onPageChanged: (i, r) {
@@ -60,7 +65,7 @@ class _PortfolioState extends State<Portfolio> {
         const SizedBox(
           height: 32,
         ),
-        //const Wrap(spacing: 32, runSpacing: 32, children: projectsDisplayItems),
+        const Wrap(spacing: 32, runSpacing: 32, children: portfolioDisplayItems),
         const SizedBox(
           height: 32,
         ),
@@ -120,7 +125,12 @@ class DisplayItem extends StatelessWidget {
             ),
           if (url.isNotEmpty)
             IconButton(
-                onPressed: () {}, icon: const Icon(FontAwesomeIcons.arrowRight))
+                onPressed: ()async{
+                  final uri = Uri.parse(url);
+                  if(await canLaunchUrl(uri)){
+                    launchUrl(uri);
+                  }
+                }, icon: const Icon(FontAwesomeIcons.arrowRight))
         ],
       ),
     );
@@ -156,24 +166,24 @@ const portfolioDisplayItems = [
 
 const projectsDisplayItems = [
   DisplayItem(
-    imageProvider: NetworkImage('assets/projects/bloodnate.png'),
+    imageProvider: NetworkImage('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm213batch2-s58-ning-02_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=7bdb45712307f17223343f0601704436'),
     title: 'Bloodnate',
     description:
         'Bloodnate is an idea of digitalising blood banks, This project is an app for Android and IOS. A user can make request for blood donation and can also find donor of some specific blood type and component, or can check availability of stocks in blood banks and can book it.',
-    url: '',
+    url: 'https://bloodnate.prateekthakur.dev',
   ),
   DisplayItem(
-    imageProvider: NetworkImage('assets/projects/bunkmate.png'),
+    imageProvider: NetworkImage('https://www.insperity.com/wp-content/uploads/time-and-attendance-policy-1200x630-1-1024x538.png'),
     title: 'Bunkmate',
     description:
         'Bunkmate is a cross-platform mobile application to track daily collage lecture attandance built with Flutter and Firebase.',
-    url: '',
+    url: 'https://github.com/prateekthakur272/bunkmate',
   ),
   DisplayItem(
-    imageProvider: NetworkImage('assets/projects/tasks.png'),
+    imageProvider: NetworkImage('https://www.amitree.com/wp-content/uploads/2021/08/the-pros-and-cons-of-paper-to-do-lists.jpeg'),
     title: 'Tasks',
     description:
         'Never forget your tasks, just use the tasks app and keep yourself reminding about next tasks. This is an android application built with kotlin. This application have a good user experience and interactive and easy to access user interface.',
-    url: '',
+    url: 'https://github.com/prateekthakur272/tasks',
   ),
 ];
