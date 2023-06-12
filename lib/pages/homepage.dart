@@ -3,6 +3,8 @@ import 'package:prateekthakur/widgets/about.dart';
 import 'package:prateekthakur/widgets/intro.dart';
 import 'package:prateekthakur/widgets/skills.dart';
 
+import '../widgets/qualifications.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -33,6 +35,10 @@ class HomePage extends StatelessWidget {
                       height: 54,
                     ),
                     Skills(),
+                    SizedBox(
+                      height: 54,
+                    ),
+                    Qualifications(),
                     SizedBox(
                       height: 54,
                     ),
