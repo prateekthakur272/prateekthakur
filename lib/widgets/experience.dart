@@ -5,12 +5,13 @@ class Experience extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400,
-      width: 400,
+      padding: const EdgeInsets.all(16),
+      width: 600,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Colors.blue
+        color: Colors.grey.shade200
       ),
+      child: const Center(child: Text('No Data',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)),
     );
   }
 }
