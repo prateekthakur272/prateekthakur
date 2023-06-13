@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DoItTogether extends StatelessWidget {
   const DoItTogether({super.key});
@@ -37,7 +38,12 @@ class DoItTogether extends StatelessWidget {
         const SizedBox(
           height: 16,
         ),
-        OutlinedButton(onPressed: (){}, child: const Text('Share idea'))
+        OutlinedButton(onPressed: ()async{
+          final url = Uri.parse('mailto:prateekthakur272@gmail.com?subject=Let\'s build it together&body=My idea is ...');
+          if(await canLaunchUrl(url)){
+            launchUrl(url);
+          }
+        }, child: const Text('Share idea'))
       ],
     );
   }
