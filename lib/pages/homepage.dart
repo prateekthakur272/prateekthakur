@@ -14,47 +14,51 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Text(
-            'Prateek Thakur',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-        ),
-      ),
       body: Center(
         child: Row(
           children: [
             Expanded(
                 flex: 9,
                 child: Center(
-                    child: ListView(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
-                  children: const [
-                    Intro(),
-                    About(),
-                    SizedBox(
-                      height: 54,
-                    ),
-                    Skills(),
-                    SizedBox(
-                      height: 54,
-                    ),
-                    Qualifications(),
-                    SizedBox(
-                      height: 54,
-                    ),
-                    Portfolio(),
-                    SizedBox(
-                      height: 54,
-                    ),
-                    DoItTogether(),
-                    SizedBox(
-                      height: 54,
-                    ),
-                    BottomBar()
+                    child: NestedScrollView(
+                  headerSliverBuilder: (context, innerBoxIsScrolled) => [
+                    const SliverAppBar(
+                      floating: true,
+                      snap: true,
+                      title: Text(
+                        'Prateek Thakur',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      centerTitle: true,
+                    )
                   ],
+                  body: ListView(
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    children: const [
+                      Intro(),
+                      About(),
+                      SizedBox(
+                        height: 54,
+                      ),
+                      Skills(),
+                      SizedBox(
+                        height: 54,
+                      ),
+                      Qualifications(),
+                      SizedBox(
+                        height: 54,
+                      ),
+                      Portfolio(),
+                      SizedBox(
+                        height: 54,
+                      ),
+                      DoItTogether(),
+                      SizedBox(
+                        height: 54,
+                      ),
+                      BottomBar()
+                    ],
+                  ),
                 )))
           ],
         ),
