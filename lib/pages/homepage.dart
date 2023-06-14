@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:prateekthakur/widgets/about.dart';
 import 'package:prateekthakur/widgets/bottom_bar.dart';
 import 'package:prateekthakur/widgets/do_it_together.dart';
@@ -13,6 +14,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var fabVisible = true;
     return Scaffold(
       appBar: AppBar(
         title: const Padding(
@@ -59,6 +61,28 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: fabVisible? SpeedDial(
+        animatedIcon: AnimatedIcons.menu_close,
+        backgroundColor: Colors.yellow.shade800,
+        foregroundColor: Colors.white,
+        children: [
+          SpeedDialChild(
+            child: const Icon(Icons.home),
+          ),
+          SpeedDialChild(
+            child: const Icon(Icons.account_circle),
+          ),
+          SpeedDialChild(
+            child: const Icon(Icons.school),
+          ),
+          SpeedDialChild(
+            child: const Icon(Icons.apps),
+          ),
+          SpeedDialChild(
+            child: const Icon(Icons.lightbulb),
+          ),
+        ],
+      ):null
     );
   }
 }
