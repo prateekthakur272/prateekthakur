@@ -24,6 +24,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final controller = ItemScrollController();
+    final size = MediaQuery.of(context).size;
     return Scaffold(
         body: Center(
           child: Row(
@@ -69,6 +70,7 @@ class _HomePageState extends State<HomePage> {
         floatingActionButton: isFabVisible
             ? SpeedDial(
                 renderOverlay: false,
+                direction: size.width>size.height? SpeedDialDirection.left:SpeedDialDirection.up,
                 animatedIcon: AnimatedIcons.menu_close,
                 backgroundColor: Colors.yellow.shade800,
                 foregroundColor: Colors.white,
