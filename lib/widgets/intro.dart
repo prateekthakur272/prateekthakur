@@ -32,7 +32,7 @@ class Intro extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(16.0),
               child: CircleAvatar(
-                foregroundImage: AssetImage('assets/picture.JPG'),
+                foregroundImage: AssetImage('assets/profile.jpeg'),
                 backgroundColor: Colors.black,
                 radius: 160,
               ),
