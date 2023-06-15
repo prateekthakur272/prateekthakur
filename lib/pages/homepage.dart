@@ -74,6 +74,7 @@ class _HomePageState extends State<HomePage> {
                 animatedIcon: AnimatedIcons.menu_close,
                 backgroundColor: Colors.yellow.shade800,
                 foregroundColor: Colors.white,
+                childrenButtonSize: const Size(64,64),
                 children: [
                   SpeedDialChild(
                     child: const Icon(Icons.home),
