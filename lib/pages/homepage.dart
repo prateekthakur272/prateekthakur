@@ -69,12 +69,16 @@ class _HomePageState extends State<HomePage> {
         ),
         floatingActionButton: isFabVisible
             ? SpeedDial(
+                spacing: 4,
+                elevation: 8,
                 renderOverlay: false,
-                direction: size.width>size.height? SpeedDialDirection.left:SpeedDialDirection.up,
+                direction: size.width > size.height
+                    ? SpeedDialDirection.left
+                    : SpeedDialDirection.up,
                 animatedIcon: AnimatedIcons.menu_close,
                 backgroundColor: Colors.yellow.shade800,
                 foregroundColor: Colors.white,
-                childrenButtonSize: const Size(64,64),
+                childrenButtonSize: const Size(64, 64),
                 children: [
                   SpeedDialChild(
                     child: const Icon(Icons.home),
