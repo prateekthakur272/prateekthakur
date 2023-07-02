@@ -82,7 +82,7 @@ class About extends StatelessWidget {
         ),
         OutlinedButton(
             onPressed: () async {
-              final url = Uri.parse('https://drive.google.com/file/d/1OZ2aZ-1ZrhtYQPri6gxbjLwNss2gWPXH/view?usp=share_link');
+              final url = Uri.parse(resumeUrl);
               if (await canLaunchUrl(url)) {
                 launchUrl(url);
               }
