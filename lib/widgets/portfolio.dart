@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,60 +14,35 @@ class _PortfolioState extends State<Portfolio> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Text(
+        Text(
           'Portfolio',
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
         ),
-        const Text(
+        Text(
           'My recent projects and works',
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 14, color: Colors.grey),
         ),
-        const SizedBox(
+        SizedBox(
           height: 32,
         ),
-        CarouselSlider(
-            items: projectsDisplayItems,
-            options: CarouselOptions(
-              height: 560,
-              autoPlayInterval: const Duration(seconds: 5),
-              pauseAutoPlayOnManualNavigate: true,
-              pauseAutoPlayOnTouch: true,
-              enlargeStrategy: CenterPageEnlargeStrategy.scale,
-              enlargeCenterPage: true,
-              autoPlay: true,
-              onPageChanged: (i, r) {
-                setState(() {
-                  index = i;
-                });
-              },
-            )),
-        Row(
-            mainAxisSize: MainAxisSize.min,
-            children: portfolioDisplayItems.map((e) {
-              return Padding(
-                padding: const EdgeInsets.all(4.0),
-                child: Container(
-                  height: 8,
-                  width: 8,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: portfolioDisplayItems.indexOf(e) == index
-                          ? Colors.black
-                          : Colors.grey),
-                ),
-              );
-            }).toList()),
-        const SizedBox(
+        Wrap(
+          spacing: 32,
+          runSpacing: 32,
+          alignment: WrapAlignment.center,
+          children: projectsDisplayItems,
+        ),
+        SizedBox(
           height: 32,
         ),
-        const Wrap(spacing: 32, runSpacing: 32, children: portfolioDisplayItems),
-        const SizedBox(
-          height: 32,
-        ),
+        Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 32,
+            runSpacing: 32,
+            children: portfolioDisplayItems),
       ],
     );
   }
@@ -125,12 +99,13 @@ class DisplayItem extends StatelessWidget {
             ),
           if (url.isNotEmpty)
             IconButton(
-                onPressed: ()async{
+                onPressed: () async {
                   final uri = Uri.parse(url);
-                  if(await canLaunchUrl(uri)){
+                  if (await canLaunchUrl(uri)) {
                     launchUrl(uri);
                   }
-                }, icon: const Icon(FontAwesomeIcons.arrowRight))
+                },
+                icon: const Icon(FontAwesomeIcons.arrowRight))
         ],
       ),
     );
@@ -166,21 +141,24 @@ const portfolioDisplayItems = [
 
 const projectsDisplayItems = [
   DisplayItem(
-    imageProvider: NetworkImage('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm213batch2-s58-ning-02_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=7bdb45712307f17223343f0601704436'),
+    imageProvider: NetworkImage(
+        'https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm213batch2-s58-ning-02_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=7bdb45712307f17223343f0601704436'),
     title: 'Bloodnate',
     description:
         'Bloodnate is an idea of digitalising blood banks, This project is an app for Android and IOS. A user can make request for blood donation and can also find donor of some specific blood type and component, or can check availability of stocks in blood banks and can book it.',
     url: 'https://bloodnate.prateekthakur.dev',
   ),
   DisplayItem(
-    imageProvider: NetworkImage('https://www.insperity.com/wp-content/uploads/time-and-attendance-policy-1200x630-1-1024x538.png'),
+    imageProvider: NetworkImage(
+        'https://www.insperity.com/wp-content/uploads/time-and-attendance-policy-1200x630-1-1024x538.png'),
     title: 'Bunkmate',
     description:
         'Bunkmate is a cross-platform mobile application to track daily collage lecture attandance built with Flutter and Firebase.',
     url: 'https://github.com/prateekthakur272/bunkmate',
   ),
   DisplayItem(
-    imageProvider: NetworkImage('https://www.amitree.com/wp-content/uploads/2021/08/the-pros-and-cons-of-paper-to-do-lists.jpeg'),
+    imageProvider: NetworkImage(
+        'https://www.amitree.com/wp-content/uploads/2021/08/the-pros-and-cons-of-paper-to-do-lists.jpeg'),
     title: 'Tasks',
     description:
         'Never forget your tasks, just use the tasks app and keep yourself reminding about next tasks. This is an android application built with kotlin. This application have a good user experience and interactive and easy to access user interface.',
