@@ -14,31 +14,40 @@ class _PortfolioState extends State<Portfolio> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
+        const Text(
           'Portfolio',
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
         ),
-        Text(
+        const Text(
           'My recent projects and works',
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 14, color: Colors.grey),
         ),
-        SizedBox(
+        const SizedBox(
           height: 32,
         ),
-        Wrap(
+        const Wrap(
           spacing: 32,
           runSpacing: 32,
           alignment: WrapAlignment.center,
           children: projectsDisplayItems,
         ),
-        SizedBox(
-          height: 32,
+        OutlinedButton(
+            onPressed: () async {
+              final url = Uri.parse(
+                  'https://github.com/prateekthakur272?tab=repositories');
+              if (await canLaunchUrl(url)) {
+                launchUrl(url);
+              }
+            },
+            child: const Text('View all projects')),
+        const SizedBox(
+          height: 54,
         ),
-        Wrap(
+        const Wrap(
             alignment: WrapAlignment.center,
             spacing: 32,
             runSpacing: 32,
