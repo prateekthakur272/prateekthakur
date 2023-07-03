@@ -35,6 +35,9 @@ class _PortfolioState extends State<Portfolio> {
           alignment: WrapAlignment.center,
           children: projectsDisplayItems,
         ),
+        const SizedBox(
+          height: 16,
+        ),
         OutlinedButton(
             onPressed: () async {
               final url = Uri.parse(
@@ -46,6 +49,18 @@ class _PortfolioState extends State<Portfolio> {
             child: const Text('View all projects')),
         const SizedBox(
           height: 54,
+        ),
+        const Text(
+          'What i do',
+          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+        ),
+        const Text(
+          'Field i work and interested in',
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 14, color: Colors.grey),
+        ),
+        const SizedBox(
+          height: 16,
         ),
         const Wrap(
             alignment: WrapAlignment.center,
