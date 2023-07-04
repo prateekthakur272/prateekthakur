@@ -29,6 +29,26 @@ class _PortfolioState extends State<Portfolio> {
         const SizedBox(
           height: 32,
         ),
+        const Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 32,
+            runSpacing: 32,
+            children: portfolioDisplayItems),
+        const SizedBox(
+          height: 54,
+        ),
+        const Text(
+          'Projects',
+          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+        ),
+        const Text(
+          'My all time best projects',
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 14, color: Colors.grey),
+        ),
+        const SizedBox(
+          height: 16,
+        ),
         Wrap(
           spacing: 32,
           runSpacing: 32,
@@ -44,26 +64,6 @@ class _PortfolioState extends State<Portfolio> {
                   MaterialPageRoute(builder: (context) => const Projects()));
             },
             child: const Text('View all projects')),
-        const SizedBox(
-          height: 54,
-        ),
-        const Text(
-          'What i do',
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-        ),
-        const Text(
-          'Field i work and interested in',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 14, color: Colors.grey),
-        ),
-        const SizedBox(
-          height: 16,
-        ),
-        const Wrap(
-            alignment: WrapAlignment.center,
-            spacing: 32,
-            runSpacing: 32,
-            children: portfolioDisplayItems),
       ],
     );
   }
