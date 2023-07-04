@@ -31,32 +31,25 @@ class App extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                       vertical: 24, horizontal: 32))),
           expansionTileTheme: ExpansionTileThemeData(
-            childrenPadding: const EdgeInsets.all(16),
-            iconColor: Colors.yellow.shade800,
-            textColor: Colors.yellow.shade800,
-            collapsedTextColor: Colors.black,
-            collapsedIconColor: Colors.black,
-            backgroundColor: Colors.grey.shade200,
-            collapsedBackgroundColor: Colors.transparent,
-            expandedAlignment: Alignment.topLeft,
-            collapsedShape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16)
-            ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16)
-            )
-          ),
+              childrenPadding: const EdgeInsets.all(16),
+              iconColor: Colors.yellow.shade800,
+              textColor: Colors.yellow.shade800,
+              collapsedTextColor: Colors.black,
+              collapsedIconColor: Colors.black,
+              backgroundColor: Colors.grey.shade200,
+              collapsedBackgroundColor: Colors.transparent,
+              expandedAlignment: Alignment.topLeft,
+              collapsedShape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16))),
           listTileTheme: const ListTileThemeData(
             titleTextStyle: TextStyle(
-              fontSize: 16,
-              color: Colors.black,
-              fontWeight: FontWeight.bold
-            ),
+                fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
             subtitleTextStyle: TextStyle(
               fontSize: 14,
             ),
-          )
-          ),
+          )),
       home: const HomePage(),
     );
   }
