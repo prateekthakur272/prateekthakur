@@ -43,7 +43,7 @@ const projectsDisplayItems = [
     title: 'PDF Go',
     description:
         'Never forget your tasks, just use the tasks app and keep yourself reminding about next tasks. This is an android application built with kotlin. This application have a good user experience and interactive and easy to access user interface.',
-    url: 'https://github.com/prateekthakur272/tasks',
+    url: 'https://github.com/prateekthakur272/pdf-go',
   ),
   DisplayItem(
     imageProvider: AssetImage('assets/project_banners/tasks.png'),
@@ -65,6 +65,48 @@ const projectsDisplayItems = [
     description:
         'Bloodnate is an idea of digitalising blood banks, This project is an app for Android and IOS. A user can make request for blood donation and can also find donor of some specific blood type and component, or can check availability of stocks in blood banks and can book it.',
     url: 'https://bloodnate.prateekthakur.dev',
+  ),
+  DisplayItem(
+    imageProvider: AssetImage('assets/project_banners/umbrella.png'),
+    title: 'The Umbrella App',
+    description:
+        'Wheather app built with flutter for Android and IOS devices, provides 24hr wheather forecast report and other data such as humidity, wind direction, speed and air quality index.',
+    url: 'https://github.com/prateekthakur272/umbrella-app-flutter',
+  ),
+  DisplayItem(
+    imageProvider: AssetImage('assets/project_banners/portfolio.png'),
+    title: 'Portfolio website',
+    description:
+        'My pesonal portfolio website built with flutter and deployed using firebase, available at https://prateekthakur.dev',
+    url: 'https://prateekthakur.dev',
+  ),
+  DisplayItem(
+    imageProvider: AssetImage('assets/project_banners/good_diary.png'),
+    title: 'Bloodnate',
+    description:
+        'A personal diary android application to share moments and secrets with, application has good UI and UX and available in dark and light theme.',
+    url: 'https://github.com/prateekthakur272/Good-Diary',
+  ),
+  DisplayItem(
+    imageProvider: AssetImage('assets/project_banners/password_generator.png'),
+    title: 'Password Generator',
+    description:
+        'Password generator mobile app for android and iOS devices, generate and use passwords for your apps and websites in the way you want.',
+    url: 'https://github.com/prateekthakur272/password-generator',
+  ),
+  DisplayItem(
+    imageProvider: AssetImage('assets/project_banners/converter.png'),
+    title: 'Coverter',
+    description:
+        'Converter is an Android app to convert data from one unit to another unit.',
+    url: 'https://github.com/prateekthakur272/Converter',
+  ),
+  DisplayItem(
+    imageProvider: AssetImage('assets/project_banners/tic_tac_toe.png'),
+    title: 'Tic Tac Toe',
+    description:
+        'The famous tic tac toe game for Android devices, play with your friend or with computer.',
+    url: 'https://github.com/prateekthakur272/Tic-Tac-Toe',
   ),
 ];
 
