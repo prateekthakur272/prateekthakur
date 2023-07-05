@@ -62,6 +62,7 @@ class DisplayItem extends StatelessWidget {
                     launchUrl(uri);
                   }
                 },
+                tooltip: 'Click to view',
                 icon: const Icon(FontAwesomeIcons.link))
         ],
       ),

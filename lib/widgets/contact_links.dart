@@ -18,6 +18,7 @@ class ContactLinks extends StatelessWidget {
                 launchUrl(url);
               }
             },
+            tooltip: 'Github',
             icon: const Icon(FontAwesomeIcons.github)),
         IconButton(
             onPressed: () async {
@@ -27,6 +28,7 @@ class ContactLinks extends StatelessWidget {
                 launchUrl(url);
               }
             },
+            tooltip: 'Instagram',
             icon: const Icon(FontAwesomeIcons.instagram)),
         IconButton(
             onPressed: () async {
@@ -36,6 +38,7 @@ class ContactLinks extends StatelessWidget {
                 launchUrl(url);
               }
             },
+            tooltip: 'LinkedIn',
             icon: const Icon(FontAwesomeIcons.linkedin)),
         IconButton(
             onPressed: () async {
@@ -44,6 +47,7 @@ class ContactLinks extends StatelessWidget {
                 launchUrl(url);
               }
             },
+            tooltip: 'E-mail',
             icon: const Icon(Icons.email)),
       ],
     );
