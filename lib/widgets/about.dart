@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:prateekthakur/constants.dart';
 import 'package:prateekthakur/widgets/about_item.dart';
+import 'package:prateekthakur/widgets/window.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class About extends StatelessWidget {
@@ -40,27 +41,36 @@ class About extends StatelessWidget {
             const SizedBox(
               height: 48,
             ),
-            Container(
-              padding: const EdgeInsets.all(24),
-              decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(16)),
-              child: SizedBox(
-                width: 400,
-                child: Column(
-                  children: [
-                    Text(
-                      intro,
-                      style: GoogleFonts.inconsolata(
-                          textStyle: const TextStyle(
-                        fontSize: 16,
-                      )),
-                      textAlign: TextAlign.justify,
-                    )
-                  ],
-                ),
-              ),
-            ),
+            // Container(
+            //   padding: const EdgeInsets.all(24),
+            //   decoration: BoxDecoration(
+            //       color: Colors.grey.shade200,
+            //       borderRadius: BorderRadius.circular(16)),
+            //   child: SizedBox(
+            //     width: 400,
+            //     child: Column(
+            //       children: [
+            //         Text(
+            //           intro,
+            //           style: GoogleFonts.inconsolata(
+            //               textStyle: const TextStyle(
+            //             fontSize: 16,
+            //           )),
+            //           textAlign: TextAlign.justify,
+            //         )
+            //       ],
+            //     ),
+            //   ),
+            // ),
+            Window(
+                content: Text(
+              intro,
+              style: GoogleFonts.inconsolata(
+                  textStyle: const TextStyle(
+                fontSize: 16,
+              )),
+              textAlign: TextAlign.justify,
+            ))
           ],
         ),
         const SizedBox(
