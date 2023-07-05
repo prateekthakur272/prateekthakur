@@ -49,7 +49,11 @@ class App extends StatelessWidget {
             subtitleTextStyle: TextStyle(
               fontSize: 14,
             ),
-          )),
+          ),
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+              backgroundColor: Colors.yellow.shade800,
+              foregroundColor: Colors.white,
+              enableFeedback: true)),
       home: const HomePage(),
     );
   }
