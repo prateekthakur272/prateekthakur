@@ -47,7 +47,7 @@ class DisplayItem extends StatelessWidget {
           ),
           Text(
             description,
-            style: GoogleFonts.inconsolata(),
+            style: GoogleFonts.inconsolata(height: 1.2),
             textAlign: TextAlign.justify,
           ),
           if (url.isNotEmpty)
@@ -62,7 +62,7 @@ class DisplayItem extends StatelessWidget {
                     launchUrl(uri);
                   }
                 },
-                icon: const Icon(FontAwesomeIcons.arrowRight))
+                icon: const Icon(FontAwesomeIcons.link))
         ],
       ),
     );

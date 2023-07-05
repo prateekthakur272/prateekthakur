@@ -39,7 +39,7 @@ class _ProjectsState extends State {
                   ),
                   Text(
                     "I firmly believe that projects are the ultimate way to showcase one's skills. They go beyond theoretical knowledge, allowing us to demonstrate our practical abilities and creativity. Projects serve as tangible evidence of our problem-solving capabilities, attention to detail, and dedication to delivering real-world solutions. They provide a platform to showcase our technical expertise and highlight our unique approach to problem-solving. Through my portfolio, I aim to present a collection of projects that not only exhibit my skills but also demonstrate my passion for turning ideas into reality. Each project is a testament to the endless possibilities that arise when skills and creativity intersect.",
-                    style: GoogleFonts.inconsolata(),
+                    style: GoogleFonts.inconsolata(height: 1.2),
                     textAlign: TextAlign.justify,
                   ),
                   const SizedBox(

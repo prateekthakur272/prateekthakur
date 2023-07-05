@@ -62,15 +62,19 @@ class About extends StatelessWidget {
             //     ),
             //   ),
             // ),
-            Window(
-                content: Text(
-              intro,
-              style: GoogleFonts.inconsolata(
-                  textStyle: const TextStyle(
-                fontSize: 16,
+            SizedBox(
+              width: 480,
+              child: Window(
+                  content: Text(
+                intro,
+                style: GoogleFonts.inconsolata(
+                    textStyle: const TextStyle(
+                  height: 1.2,
+                  fontSize: 16,
+                )),
+                textAlign: TextAlign.justify,
               )),
-              textAlign: TextAlign.justify,
-            ))
+            )
           ],
         ),
         const SizedBox(
