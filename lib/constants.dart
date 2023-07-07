@@ -109,21 +109,3 @@ const projectsDisplayItems = [
     url: 'https://github.com/prateekthakur272/Tic-Tac-Toe',
   ),
 ];
-
-var carouselItems = [
-  Container(
-    clipBehavior: Clip.hardEdge,
-    decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
-    child: Image.asset('assets/project_banners/bloodnate.png'),
-  ),
-  Container(
-    clipBehavior: Clip.hardEdge,
-    decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
-    child: Image.asset('assets/project_banners/tasks.png'),
-  ),
-  Container(
-    clipBehavior: Clip.hardEdge,
-    decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
-    child: Image.asset('assets/project_banners/pdfgo.png'),
-  ),
-];
