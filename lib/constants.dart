@@ -82,7 +82,7 @@ const projectsDisplayItems = [
   ),
   DisplayItem(
     imageProvider: AssetImage('assets/project_banners/good_diary.png'),
-    title: 'Bloodnate',
+    title: 'The Good Diary',
     description:
         'A personal diary android application to share moments and secrets with, application has good UI and UX and available in dark and light theme.',
     url: 'https://github.com/prateekthakur272/Good-Diary',
