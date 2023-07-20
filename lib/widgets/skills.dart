@@ -26,6 +26,24 @@ class Skills extends StatelessWidget {
             SizedBox(
               width: 400,
               child: ExpansionTile(
+                leading: Icon(FontAwesomeIcons.code),
+                title: Text(
+                  'Programming',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                children: [
+                  ListTile(title: Text('C++')),
+                  ListTile(title: Text('Java')),
+                  ListTile(title: Text('Python')),
+                  ListTile(title: Text('Dart')),
+                  ListTile(title: Text('Kotlin')),
+                  ListTile(title: Text('Javascript')),
+                ],
+              ),
+            ),
+            SizedBox(
+              width: 400,
+              child: ExpansionTile(
                 leading: Icon(FontAwesomeIcons.desktop),
                 title: Text(
                   'Frontend',
@@ -42,7 +60,7 @@ class Skills extends StatelessWidget {
             SizedBox(
               width: 400,
               child: ExpansionTile(
-                leading: Icon(FontAwesomeIcons.server),
+                leading: Icon(FontAwesomeIcons.nodeJs),
                 title: Text(
                   'Backend',
                   style: TextStyle(fontWeight: FontWeight.bold),
@@ -103,16 +121,44 @@ class Skills extends StatelessWidget {
             SizedBox(
               width: 400,
               child: ExpansionTile(
-                leading: Icon(FontAwesomeIcons.cloud),
+                leading: Icon(FontAwesomeIcons.aws),
                 title: Text(
-                  'Cloud',
+                  'AWS',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
-                    title: Text('AWS'),
-                    subtitle:
-                        Text('Amazon web services, computing, storage etc.'),
+                    title: Text('Computing'),
+                    subtitle: Text('Creating cloud based virtual machines'),
+                  ),
+                  ListTile(
+                    title: Text('Storage'),
+                    subtitle: Text('Store data over cloud'),
+                  ),
+                  ListTile(
+                    title: Text('Hosting'),
+                    subtitle: Text(
+                        'Host and run web apps and web servers over cloud'),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              width: 400,
+              child: ExpansionTile(
+                leading: Icon(FontAwesomeIcons.docker),
+                title: Text(
+                  'Docker',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                children: [
+                  ListTile(
+                    title: Text('Docker containers'),
+                    subtitle: Text('Create and run application in a container'),
+                  ),
+                  ListTile(
+                    title: Text('Docker hub'),
+                    subtitle: Text('publish & pull container'),
                   ),
                 ],
               ),
