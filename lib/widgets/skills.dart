@@ -23,24 +23,24 @@ class Skills extends StatelessWidget {
           spacing: 24,
           runSpacing: 24,
           children: [
-            SizedBox(
-              width: 400,
-              child: ExpansionTile(
-                leading: Icon(FontAwesomeIcons.code),
-                title: Text(
-                  'Programming',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                children: [
-                  ListTile(title: Text('C++')),
-                  ListTile(title: Text('Java')),
-                  ListTile(title: Text('Python')),
-                  ListTile(title: Text('Dart')),
-                  ListTile(title: Text('Kotlin')),
-                  ListTile(title: Text('Javascript')),
-                ],
-              ),
-            ),
+            // SizedBox(
+            //   width: 400,
+            //   child: ExpansionTile(
+            //     leading: Icon(FontAwesomeIcons.code),
+            //     title: Text(
+            //       'Programming',
+            //       style: TextStyle(fontWeight: FontWeight.bold),
+            //     ),
+            //     children: [
+            //       ListTile(title: Text('C++')),
+            //       ListTile(title: Text('Java')),
+            //       ListTile(title: Text('Python')),
+            //       ListTile(title: Text('Dart')),
+            //       ListTile(title: Text('Kotlin')),
+            //       ListTile(title: Text('Javascript')),
+            //     ],
+            //   ),
+            // ),
             SizedBox(
               width: 400,
               child: ExpansionTile(
