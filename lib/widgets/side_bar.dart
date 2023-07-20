@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SideBar extends StatefulWidget {
-  const SideBar({super.key});
+  final List<Widget> actions;
+  const SideBar({super.key, required this.actions});
 
   @override
   State<SideBar> createState() => _SideBarState();
@@ -10,34 +11,17 @@ class SideBar extends StatefulWidget {
 class _SideBarState extends State<SideBar> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      color: Colors.grey.shade200,
-      child: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(
-              height: 32,
-            ),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.home)),
-            const SizedBox(
-              height: 32,
-            ),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.bar_chart)),
-            const SizedBox(
-              height: 32,
-            ),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.email)),
-            const SizedBox(
-              height: 32,
-            ),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.person)),
-            const SizedBox(
-              height: 32,
-            ),
-          ],
+    return SizedBox(
+      height: double.infinity,
+      child: Material(
+        color: Colors.grey.shade200,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+          child: Wrap(
+              alignment: WrapAlignment.center,
+              direction: Axis.vertical,
+              spacing: 24,
+              children: widget.actions),
         ),
       ),
     );
