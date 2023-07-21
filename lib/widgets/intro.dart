@@ -8,7 +8,7 @@ class Intro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height-54,
+      height: MediaQuery.of(context).size.height - 54,
       child: const Center(
         child: Wrap(
           crossAxisAlignment: WrapCrossAlignment.center,
@@ -19,12 +19,22 @@ class Intro extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title,style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold)),
-                  SizedBox(height: 16,),
-                  Text(subtitle ,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
-                  SizedBox(height: 4,),
-                  Text(organization ,style: TextStyle(fontSize: 18)),
-                  SizedBox(height: 24,),
+                  Text(title,
+                      style:
+                          TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Text(subtitle,
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    height: 4,
+                  ),
+                  Text(organization, style: TextStyle(fontSize: 18)),
+                  SizedBox(
+                    height: 24,
+                  ),
                   ContactLinks()
                 ],
               ),
@@ -32,7 +42,7 @@ class Intro extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(16.0),
               child: CircleAvatar(
-                foregroundImage: AssetImage('assets/profile.jpeg'),
+                foregroundImage: AssetImage('assets/profile_picture.jpeg'),
                 backgroundColor: Colors.black,
                 radius: 160,
               ),
