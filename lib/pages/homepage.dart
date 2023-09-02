@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:prateekthakur/constants.dart';
 import 'package:prateekthakur/widgets/about.dart';
 import 'package:prateekthakur/widgets/bottom_bar.dart';
 import 'package:prateekthakur/widgets/do_it_together.dart';
 import 'package:prateekthakur/widgets/intro.dart';
 import 'package:prateekthakur/widgets/portfolio.dart';
-import 'package:prateekthakur/widgets/side_bar.dart';
+import 'package:prateekthakur/widgets/goto_bar.dart';
 import 'package:prateekthakur/widgets/skills.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
@@ -19,7 +20,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var isFabVisible = true;
+  var isBarVisible = true;
 
   @override
   Widget build(BuildContext context) {
@@ -58,53 +59,51 @@ class _HomePageState extends State<HomePage> {
         tooltip: 'Projects and Services',
       ),
       IconButton(
-        onPressed: () => controller.scrollTo(
-            index: 9, duration: const Duration(milliseconds: 500)),
+        onPressed: () {
+          controller.scrollTo(
+              index: 9, duration: const Duration(milliseconds: 500));
+          setState(() {
+            isBarVisible = false;
+          });
+        },
         icon: const Icon(Icons.lightbulb),
         tooltip: 'Share idea',
       ),
     ];
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          title,
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+      ),
       body: Center(
-        child: Row(
+        child: Stack(
+          alignment: AlignmentDirectional.bottomCenter,
           children: [
-            if (width >= 720) SideBar(actions: actions),
-            Expanded(
-                flex: 9,
-                child: Center(
-                    child: NotificationListener<UserScrollNotification>(
+            Center(
+              child: NotificationListener<UserScrollNotification>(
                   onNotification: (notification) {
                     if (notification.direction == ScrollDirection.forward) {
                       setState(() {
-                        isFabVisible = true;
+                        isBarVisible = true;
                       });
                     } else if (notification.direction ==
                         ScrollDirection.reverse) {
                       setState(() {
-                        isFabVisible = false;
+                        isBarVisible = false;
                       });
                     }
                     return true;
                   },
-                  child: NestedScrollView(
-                      headerSliverBuilder: (context, innerBoxIsScrolled) => [
-                            const SliverAppBar(
-                              floating: true,
-                              snap: true,
-                              title: Text(
-                                'Prateek Thakur',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              centerTitle: true,
-                            )
-                          ],
-                      body: ScrollablePositionedList.builder(
-                          itemScrollController: controller,
-                          padding: const EdgeInsets.symmetric(horizontal: 24),
-                          itemCount: items.length,
-                          itemBuilder: (context, index) => items[index])),
-                ))),
+                  child: ScrollablePositionedList.builder(
+                      itemScrollController: controller,
+                      padding: const EdgeInsets.symmetric(horizontal: 24),
+                      itemCount: items.length,
+                      itemBuilder: (context, index) => items[index])),
+            ),
+            if (isBarVisible && width >= 720) GoToBar(actions: actions),
           ],
         ),
       ),
