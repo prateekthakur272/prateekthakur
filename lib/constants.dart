@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:prateekthakur/widgets/display_item.dart';
 
 const title = 'Prateek Thakur';
-const subtitle = 'Flutter | Android | Backend | Developer';
+const subtitle = 'Flutter | Android | Backend | DevOps';
 const organization = 'Student at Medi-caps University';
 const intro =
     'Welcome to my portfolio website! I\'m Prateek Thakur, a passionate software developer with expertise in Flutter, Android development, Node.js, and Firebase. With a strong foundation in mobile app development, I bring creativity and functionality to life through my coding skills. I thrive on building user-friendly interfaces and delivering seamless experiences. As a dedicated learner, I keep up with the latest industry trends to ensure my projects are up-to-date and innovative. Feel free to explore my portfolio and witness the exciting projects I\'ve crafted using my skills. Let\'s connect and collaborate to turn your ideas into reality!';
@@ -12,27 +12,24 @@ const resumeUrl =
 
 const portfolioDisplayItems = [
   DisplayItem(
-    imageProvider: NetworkImage(
-        'https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_Android_Developer.jpg'),
+    imageProvider: AssetImage('assets/portfolio_banners/flutter.png'),
+    title: 'Flutter Development',
+    description:
+        'With my knowledge of flutter and MVC (model view controller) architecture, I can develop cross platform mobile apps, web apps and desktop apps using dart programing.',
+    url: '',
+  ),
+  DisplayItem(
+    imageProvider: AssetImage('assets/portfolio_banners/golang.png'),
+    title: 'Backend Development',
+    description:
+        'Able to program web server for applications to store data and work with HTTP request and response, I can create server using Golang and python (Django and FastAPI).',
+    url: '',
+  ),
+  DisplayItem(
+    imageProvider: AssetImage('assets/portfolio_banners/android.webp'),
     title: 'Android Development',
     description:
         'I can develop high end android applications with my knowledge of MVVM (model view view model) architecture and solid foundation of node.js and firebase apis.',
-    url: '',
-  ),
-  DisplayItem(
-    imageProvider: NetworkImage(
-        'https://terminalroot.com/assets/img/dart/flutter-dart.jpg'),
-    title: 'Flutter Development',
-    description:
-        'With my knowledge of flutter and MVC (model view controller) architecture, i can develop cross platform mobile apps, web apps and desktop apps using dart programing.',
-    url: '',
-  ),
-  DisplayItem(
-    imageProvider: NetworkImage(
-        'https://images.ctfassets.net/aq13lwl6616q/7cS8gBoWulxkWNWEm0FspJ/c7eb42dd82e27279307f8b9fc9b136fa/nodejs_cover_photo_smaller_size.png'),
-    title: 'Backend Development',
-    description:
-        'Able to program web server for applications to store data and work with HTTP request and response, i can create server using express.js.',
     url: '',
   ),
 ];

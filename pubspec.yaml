@@ -37,11 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^10.4.0
   google_fonts: ^5.0.0
-  percent_indicator: ^4.2.3
   firebase_core: ^2.13.1
   url_launcher: ^6.1.11
-  carousel_slider: ^4.2.1
-  flutter_speed_dial: ^7.0.0
   scrollable_positioned_list: ^0.3.8
 
 dev_dependencies:
@@ -66,7 +63,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    [assets/, assets/project_banners/]
+    [assets/, assets/project_banners/, assets/portfolio_banners/]
 
   # To add assets to your application, add an assets section, like this:
   # assets:
