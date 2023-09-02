@@ -60,13 +60,26 @@ class Skills extends StatelessWidget {
             SizedBox(
               width: 400,
               child: ExpansionTile(
-                leading: Icon(FontAwesomeIcons.nodeJs),
+                leading: Icon(FontAwesomeIcons.server),
                 title: Text(
                   'Backend',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
+                    leading: Icon(FontAwesomeIcons.golang),
+                    title: Text('Go'),
+                    subtitle:
+                        Text('Gin, http, async programming, database, api'),
+                  ),
+                  ListTile(
+                    leading: Icon(FontAwesomeIcons.python),
+                    title: Text('Django'),
+                    subtitle: Text(
+                        'Authentication, database, models, orm, django rest framework'),
+                  ),
+                  ListTile(
+                    leading: Icon(FontAwesomeIcons.nodeJs),
                     title: Text('Node js (express)'),
                     subtitle: Text('Http requests, json, apis, rest apis'),
                   ),
@@ -128,14 +141,17 @@ class Skills extends StatelessWidget {
                 ),
                 children: [
                   ListTile(
+                    leading: Icon(FontAwesomeIcons.microchip),
                     title: Text('Computing'),
                     subtitle: Text('Creating cloud based virtual machines'),
                   ),
                   ListTile(
+                    leading: Icon(Icons.storage),
                     title: Text('Storage'),
                     subtitle: Text('Store data over cloud'),
                   ),
                   ListTile(
+                    leading: Icon(Icons.web),
                     title: Text('Hosting'),
                     subtitle: Text(
                         'Host and run web apps and web servers over cloud'),
@@ -148,17 +164,24 @@ class Skills extends StatelessWidget {
               child: ExpansionTile(
                 leading: Icon(FontAwesomeIcons.docker),
                 title: Text(
-                  'Docker',
+                  'DevOps Tools',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
-                    title: Text('Docker containers'),
+                    leading: Icon(FontAwesomeIcons.docker),
+                    title: Text('Docker'),
                     subtitle: Text('Create and run application in a container'),
                   ),
                   ListTile(
-                    title: Text('Docker hub'),
-                    subtitle: Text('publish & pull container'),
+                    leading: Icon(FontAwesomeIcons.git),
+                    title: Text('Git'),
+                    subtitle: Text('Version control with git'),
+                  ),
+                  ListTile(
+                    leading: Icon(FontAwesomeIcons.github),
+                    title: Text('GitHub'),
+                    subtitle: Text('Collaboration, Workflows, deployement'),
                   ),
                 ],
               ),
