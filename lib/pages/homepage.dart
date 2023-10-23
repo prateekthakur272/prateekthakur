@@ -31,44 +31,62 @@ class _HomePageState extends State<HomePage> {
       IconButton(
         onPressed: () => controller.scrollTo(
             index: 0, duration: const Duration(milliseconds: 500)),
-        icon: const Icon(Icons.home),
+        icon: Icon(
+          Icons.home,
+          color: Theme.of(context).colorScheme.onSecondary,
+        ),
         tooltip: 'Home',
       ),
       IconButton(
         onPressed: () => controller.scrollTo(
             index: 1, duration: const Duration(milliseconds: 500)),
-        icon: const Icon(Icons.account_circle),
+        icon: Icon(
+          Icons.account_circle,
+          color: Theme.of(context).colorScheme.onSecondary,
+        ),
         tooltip: 'About',
       ),
       IconButton(
         onPressed: () => controller.scrollTo(
             index: 3, duration: const Duration(milliseconds: 500)),
-        icon: const Icon(Icons.bar_chart),
+        icon: Icon(
+          Icons.bar_chart,
+          color: Theme.of(context).colorScheme.onSecondary,
+        ),
         tooltip: 'Skills',
       ),
       IconButton(
         onPressed: () => controller.scrollTo(
             index: 5, duration: const Duration(milliseconds: 500)),
-        icon: const Icon(Icons.school),
+        icon: Icon(
+          Icons.school,
+          color: Theme.of(context).colorScheme.onSecondary,
+        ),
         tooltip: 'Education',
       ),
       IconButton(
         onPressed: () => controller.scrollTo(
             index: 7, duration: const Duration(milliseconds: 500)),
-        icon: const Icon(Icons.apps),
+        icon: Icon(
+          Icons.apps,
+          color: Theme.of(context).colorScheme.onSecondary,
+        ),
         tooltip: 'Projects and Services',
       ),
-      IconButton(
-        onPressed: () {
-          controller.scrollTo(
-              index: 9, duration: const Duration(milliseconds: 500));
-          setState(() {
-            isBarVisible = false;
-          });
-        },
-        icon: const Icon(Icons.lightbulb),
-        tooltip: 'Share idea',
-      ),
+      // IconButton(
+      //   onPressed: () {
+      //     controller.scrollTo(
+      //         index: 9, duration: const Duration(milliseconds: 500));
+      //     setState(() {
+      //       isBarVisible = false;
+      //     });
+      //   },
+      //   icon: Icon(
+      //     Icons.lightbulb,
+      //     color: Theme.of(context).colorScheme.onSecondary,
+      //   ),
+      //   tooltip: 'Share idea',
+      // ),
     ];
 
     return Scaffold(

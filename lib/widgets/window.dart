@@ -9,7 +9,7 @@ class Window extends StatelessWidget {
     return Container(
         padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
-            color: Colors.grey.shade200,
+            color: Theme.of(context).colorScheme.secondary,
             borderRadius: BorderRadius.circular(16)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

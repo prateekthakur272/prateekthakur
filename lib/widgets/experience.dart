@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class Experience extends StatelessWidget {
   const Experience({super.key});
 
@@ -9,9 +10,13 @@ class Experience extends StatelessWidget {
       width: 600,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Colors.grey.shade200
+        color: Theme.of(context).colorScheme.secondary,
       ),
-      child: const Center(child: Text('No Data',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)),
+      child: const Center(
+          child: Text(
+        'No Data',
+        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+      )),
     );
   }
 }

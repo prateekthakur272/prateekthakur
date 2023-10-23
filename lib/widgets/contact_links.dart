@@ -19,7 +19,10 @@ class ContactLinks extends StatelessWidget {
               }
             },
             tooltip: 'Github',
-            icon: const Icon(FontAwesomeIcons.github)),
+            icon: Icon(
+              FontAwesomeIcons.github,
+              color: Theme.of(context).colorScheme.onSecondary,
+            )),
         IconButton(
             onPressed: () async {
               final url = Uri.parse(
@@ -29,7 +32,10 @@ class ContactLinks extends StatelessWidget {
               }
             },
             tooltip: 'Instagram',
-            icon: const Icon(FontAwesomeIcons.instagram)),
+            icon: Icon(
+              FontAwesomeIcons.instagram,
+              color: Theme.of(context).colorScheme.onSecondary,
+            )),
         IconButton(
             onPressed: () async {
               final url = Uri.parse(
@@ -39,7 +45,10 @@ class ContactLinks extends StatelessWidget {
               }
             },
             tooltip: 'LinkedIn',
-            icon: const Icon(FontAwesomeIcons.linkedin)),
+            icon: Icon(
+              FontAwesomeIcons.linkedin,
+              color: Theme.of(context).colorScheme.onSecondary,
+            )),
         IconButton(
             onPressed: () async {
               final url = Uri.parse('mailto://prateekthakur272@gmail.com');
@@ -48,7 +57,10 @@ class ContactLinks extends StatelessWidget {
               }
             },
             tooltip: 'E-mail',
-            icon: const Icon(Icons.email)),
+            icon: Icon(
+              Icons.email,
+              color: Theme.of(context).colorScheme.onSecondary,
+            )),
       ],
     );
   }

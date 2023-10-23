@@ -27,7 +27,9 @@ class _QualificationsState extends State<Qualifications> {
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 14, color: Colors.grey),
         ),
-        const SizedBox(height: 32,),
+        const SizedBox(
+          height: 32,
+        ),
         DefaultTabController(
             length: 2,
             child: Column(
@@ -37,17 +39,20 @@ class _QualificationsState extends State<Qualifications> {
                   child: TabBar(
                       splashBorderRadius: BorderRadius.circular(8),
                       labelStyle: const TextStyle(fontWeight: FontWeight.bold),
-                      unselectedLabelColor: Colors.black,
+                      unselectedLabelColor:
+                          Theme.of(context).colorScheme.onSecondary,
                       labelColor: Colors.yellow.shade800,
                       indicatorColor: Colors.transparent,
-                      onTap: (index){
+                      onTap: (index) {
                         switch (index) {
-                          case 0 :setState(() {
-                            info = const Education();
-                          });
-                          case 1 :setState(() {
-                            info = const Experience();
-                          });
+                          case 0:
+                            setState(() {
+                              info = const Education();
+                            });
+                          case 1:
+                            setState(() {
+                              info = const Experience();
+                            });
                         }
                       },
                       tabs: const [
@@ -56,7 +61,9 @@ class _QualificationsState extends State<Qualifications> {
                         TabItem(title: 'Work', icon: FontAwesomeIcons.toolbox),
                       ]),
                 ),
-                const SizedBox(height: 16,),
+                const SizedBox(
+                  height: 16,
+                ),
                 info
               ],
             ))

@@ -15,7 +15,7 @@ class _GoToBarState extends State<GoToBar> {
       padding: const EdgeInsets.only(bottom: 16),
       child: Material(
         borderRadius: BorderRadius.circular(16),
-        color: Colors.grey.shade200,
+        color: Theme.of(context).colorScheme.secondary,
         elevation: 16,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
