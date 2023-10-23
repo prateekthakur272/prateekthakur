@@ -63,7 +63,10 @@ class DisplayItem extends StatelessWidget {
                   }
                 },
                 tooltip: 'Click to view',
-                icon: const Icon(FontAwesomeIcons.link))
+                icon: Icon(
+                  FontAwesomeIcons.link,
+                  color: Theme.of(context).colorScheme.onSecondary,
+                ))
         ],
       ),
     );

@@ -73,20 +73,6 @@ class _HomePageState extends State<HomePage> {
         ),
         tooltip: 'Projects and Services',
       ),
-      // IconButton(
-      //   onPressed: () {
-      //     controller.scrollTo(
-      //         index: 9, duration: const Duration(milliseconds: 500));
-      //     setState(() {
-      //       isBarVisible = false;
-      //     });
-      //   },
-      //   icon: Icon(
-      //     Icons.lightbulb,
-      //     color: Theme.of(context).colorScheme.onSecondary,
-      //   ),
-      //   tooltip: 'Share idea',
-      // ),
     ];
 
     return Scaffold(

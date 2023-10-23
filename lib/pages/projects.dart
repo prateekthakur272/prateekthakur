@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:prateekthakur/repository/project.dart';
 import 'package:prateekthakur/widgets/bottom_bar.dart';

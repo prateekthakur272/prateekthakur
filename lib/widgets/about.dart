@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:prateekthakur/constants.dart';
-import 'package:prateekthakur/pages/projects.dart';
 import 'package:prateekthakur/widgets/about_item.dart';
 import 'package:prateekthakur/widgets/window.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -95,22 +94,14 @@ class About extends StatelessWidget {
         const SizedBox(
           height: 48,
         ),
-        Wrap(spacing: 16, runSpacing: 16, children: [
-          OutlinedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Projects()));
-              },
-              child: const Text('View Projects')),
-          OutlinedButton(
-              onPressed: () async {
-                final url = Uri.parse(resumeUrl);
-                if (await canLaunchUrl(url)) {
-                  launchUrl(url);
-                }
-              },
-              child: const Text('Download CV')),
-        ])
+        OutlinedButton(
+            onPressed: () async {
+              final url = Uri.parse(resumeUrl);
+              if (await canLaunchUrl(url)) {
+                launchUrl(url);
+              }
+            },
+            child: const Text('Download CV'))
       ],
     );
   }
