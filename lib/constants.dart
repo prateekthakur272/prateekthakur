@@ -6,3 +6,8 @@ const intro =
 
 const resumeUrl =
     'https://drive.google.com/file/d/1UX1nGJr_rxK8cD_Y-2gwh3vNnPHa_jzO/view?usp=share_link';
+
+const gitHubUrl = 'https://github.com/prateekthakur272';
+const instaUrl = 'https://instagram.com/prateek_._thakur';
+const linkedInUrl = 'https://www.linkedin.com/in/prateek-thakur-452127216/';
+const emailUrl = 'mailto://prateekthakur272@gmail.com';

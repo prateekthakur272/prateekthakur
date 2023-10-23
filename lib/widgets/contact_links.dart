@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:prateekthakur/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactLinks extends StatelessWidget {
@@ -13,7 +14,7 @@ class ContactLinks extends StatelessWidget {
       children: [
         IconButton(
             onPressed: () async {
-              final url = Uri.parse('https://github.com/prateekthakur272');
+              final url = Uri.parse(gitHubUrl);
               if (await canLaunchUrl(url)) {
                 launchUrl(url);
               }
@@ -25,8 +26,7 @@ class ContactLinks extends StatelessWidget {
             )),
         IconButton(
             onPressed: () async {
-              final url = Uri.parse(
-                  'https://instagram.com/prateek_._thakur?igshid=OGQ5ZDc2ODk2ZA==');
+              final url = Uri.parse(instaUrl);
               if (await canLaunchUrl(url)) {
                 launchUrl(url);
               }
@@ -38,8 +38,7 @@ class ContactLinks extends StatelessWidget {
             )),
         IconButton(
             onPressed: () async {
-              final url = Uri.parse(
-                  'https://www.linkedin.com/in/prateek-thakur-452127216/');
+              final url = Uri.parse(linkedInUrl);
               if (await canLaunchUrl(url)) {
                 launchUrl(url);
               }
@@ -51,7 +50,7 @@ class ContactLinks extends StatelessWidget {
             )),
         IconButton(
             onPressed: () async {
-              final url = Uri.parse('mailto://prateekthakur272@gmail.com');
+              final url = Uri.parse(emailUrl);
               if (await canLaunchUrl(url)) {
                 launchUrl(url);
               }

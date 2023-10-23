@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:prateekthakur/constants.dart';
 import 'package:prateekthakur/repository/project.dart';
 import 'package:prateekthakur/widgets/bottom_bar.dart';
 import 'package:prateekthakur/widgets/window.dart';
@@ -66,7 +67,7 @@ class _ProjectsState extends State {
               OutlinedButton.icon(
                   icon: const Icon(FontAwesomeIcons.github),
                   onPressed: () async {
-                    final url = Uri.parse('');
+                    final url = Uri.parse(gitHubUrl);
                     if (await canLaunchUrl(url)) {
                       launchUrl(url);
                     }
