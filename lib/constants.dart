@@ -10,30 +10,6 @@ const intro =
 const resumeUrl =
     'https://drive.google.com/file/d/1UX1nGJr_rxK8cD_Y-2gwh3vNnPHa_jzO/view?usp=share_link';
 
-const portfolioDisplayItems = [
-  DisplayItem(
-    imageProvider: AssetImage('assets/portfolio_banners/flutter.png'),
-    title: 'Flutter Development',
-    description:
-        'With my knowledge of flutter and MVC (model view controller) architecture, I can develop cross platform mobile apps, web apps and desktop apps using dart programing.',
-    url: '',
-  ),
-  DisplayItem(
-    imageProvider: AssetImage('assets/portfolio_banners/golang.png'),
-    title: 'Backend Development',
-    description:
-        'Able to program web server for applications to store data and work with HTTP request and response, I can create server using Golang and python (Django and FastAPI).',
-    url: '',
-  ),
-  DisplayItem(
-    imageProvider: AssetImage('assets/portfolio_banners/android.webp'),
-    title: 'Android Development',
-    description:
-        'I can develop high end android applications with my knowledge of MVVM (model view view model) architecture and solid foundation of node.js and firebase apis.',
-    url: '',
-  ),
-];
-
 const projectsDisplayItems = [
   DisplayItem(
     imageProvider: AssetImage('assets/project_banners/pdfgo.png'),

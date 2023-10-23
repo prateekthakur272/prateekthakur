@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
+import 'package:prateekthakur/repository/service.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({super.key});
@@ -12,26 +12,27 @@ class _PortfolioState extends State<Portfolio> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
+        const Text(
           'Services',
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
         ),
-        Text(
+        const Text(
           'What do i do',
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 14, color: Colors.grey),
         ),
-        SizedBox(
+        const SizedBox(
           height: 32,
         ),
         Wrap(
-            alignment: WrapAlignment.center,
-            spacing: 32,
-            runSpacing: 32,
-            children: portfolioDisplayItems),
+          alignment: WrapAlignment.center,
+          spacing: 32,
+          runSpacing: 32,
+          children: Service.getDisplayItems(),
+        )
       ],
     );
   }
