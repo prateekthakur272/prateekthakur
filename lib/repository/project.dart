@@ -21,6 +21,30 @@ class Project {
 
 const List<Project> projects = [
   Project(
+    'Bloodnate',
+    'Bloodnate is an idea of digitalising blood banks, This project is an app for Android and IOS. A user can make request for blood donation and can also find donor of some specific blood type and component, or can check availability of stocks in blood banks and can book it.',
+    'assets/project_banners/bloodnate.png',
+    'https://bloodnate.prateekthakur.dev',
+  ),
+  Project(
+    'Sports Spotter',
+    'Sports Spotter mobile application for Android and IOS devices, get updates about sports events, events results and registration forms',
+    'assets/project_banners/sports_spotter.png',
+    'https://github.com/prateekthakur272/sports-spotter',
+  ),
+  Project(
+    'Bunkmate',
+    'Bunkmate is a cross-platform mobile application to track daily collage lecture attandance built with Flutter and Firebase.',
+    'assets/project_banners/bunkmate1.png',
+    'https://github.com/prateekthakur272/bunkmate',
+  ),
+  Project(
+    'IOS style calculator app',
+    'IOS style calculator app bult with flutter',
+    'assets/project_banners/ios_calculator.png',
+    'https://github.com/prateekthakur272/calculator',
+  ),
+  Project(
     'PDF Go',
     'Never forget your tasks, just use the tasks app and keep yourself reminding about next tasks. This is an android application built with kotlin. This application have a good user experience and interactive and easy to access user interface.',
     'assets/project_banners/pdfgo.png',
@@ -31,18 +55,6 @@ const List<Project> projects = [
     'Never forget your tasks, just use the tasks app and keep yourself reminding about next tasks. This is an android application built with kotlin. This application have a good user experience and interactive and easy to access user interface.',
     'assets/project_banners/tasks.png',
     'https://github.com/prateekthakur272/tasks',
-  ),
-  Project(
-    'Bunkmate',
-    'Bunkmate is a cross-platform mobile application to track daily collage lecture attandance built with Flutter and Firebase.',
-    'assets/project_banners/bunkmate1.png',
-    'https://github.com/prateekthakur272/bunkmate',
-  ),
-  Project(
-    'Bloodnate',
-    'Bloodnate is an idea of digitalising blood banks, This project is an app for Android and IOS. A user can make request for blood donation and can also find donor of some specific blood type and component, or can check availability of stocks in blood banks and can book it.',
-    'assets/project_banners/bloodnate.png',
-    'https://bloodnate.prateekthakur.dev',
   ),
   Project(
     'The Umbrella App',
