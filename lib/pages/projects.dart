@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:prateekthakur/constants.dart';
+import 'package:prateekthakur/repository/project.dart';
 import 'package:prateekthakur/widgets/bottom_bar.dart';
 import 'package:prateekthakur/widgets/window.dart';
 
@@ -76,11 +76,11 @@ class _ProjectsState extends State {
                   const SizedBox(
                     height: 32,
                   ),
-                  const Wrap(
+                  Wrap(
                     alignment: WrapAlignment.center,
                     spacing: 32,
                     runSpacing: 32,
-                    children: projectsDisplayItems,
+                    children: Project.getDisplayItems(),
                   ),
                   const SizedBox(
                     height: 32,
