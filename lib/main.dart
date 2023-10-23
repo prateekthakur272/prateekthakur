@@ -29,6 +29,10 @@ class App extends StatelessWidget {
               backgroundColor: Colors.transparent,
               elevation: 0,
               centerTitle: true,
+              titleTextStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20),
               foregroundColor: Colors.black),
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
@@ -84,6 +88,10 @@ class App extends StatelessWidget {
               backgroundColor: Colors.transparent,
               elevation: 0,
               centerTitle: true,
+              titleTextStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 20),
               foregroundColor: Colors.white),
           canvasColor: Colors.black,
           elevatedButtonTheme: ElevatedButtonThemeData(

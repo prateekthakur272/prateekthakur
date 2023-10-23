@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:prateekthakur/repository/project.dart';
 import 'package:prateekthakur/widgets/bottom_bar.dart';
 import 'package:prateekthakur/widgets/window.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Projects extends StatefulWidget {
   const Projects({super.key});
@@ -15,22 +17,14 @@ class _ProjectsState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(slivers: [
-        const SliverAppBar(
-          snap: true,
-          floating: true,
-          title: Text(
-            'Projects',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-        ),
-        SliverPadding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          sliver: SliverList.list(
+      appBar: AppBar(
+        title: const Text('Projects'),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 24, left: 24, right: 24),
+          child: Column(
             children: [
-              const SizedBox(
-                height: 32,
-              ),
               Window(
                 content: Column(
                   children: [
@@ -67,13 +61,25 @@ class _ProjectsState extends State {
                 children: Project.getDisplayItems(),
               ),
               const SizedBox(
+                height: 16,
+              ),
+              OutlinedButton.icon(
+                  icon: const Icon(FontAwesomeIcons.github),
+                  onPressed: () async {
+                    final url = Uri.parse('');
+                    if (await canLaunchUrl(url)) {
+                      launchUrl(url);
+                    }
+                  },
+                  label: const Text('Explore more on Github')),
+              const SizedBox(
                 height: 32,
               ),
-              const BottomBar()
+              const SizedBox(width: double.maxFinite, child: BottomBar())
             ],
           ),
-        )
-      ]),
+        ),
+      ),
     );
   }
 }
